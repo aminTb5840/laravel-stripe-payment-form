@@ -66,6 +66,7 @@
         <p>Secure payment processed by Stripe</p>
     </div>
 </div>
+<!-- Alert component -->
 @if(session('success'))
     <div id="alert-success-{{ md5(session('success')) }}"
          class="alert-container fixed top-4 right-4 z-50 max-w-sm w-full bg-white rounded-lg shadow-md ring-1 ring-black ring-opacity-5 overflow-hidden opacity-0 translate-y-2 transition-all duration-200"
@@ -192,6 +193,7 @@
         }
     </script>
 @endif
+<!-- Alert component -->
 <script src="https://js.stripe.com/v3/"></script>
 <script>
     var stripe = Stripe('{{ config('services.stripe.key') }}');
